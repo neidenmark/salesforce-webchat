@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Chat">
+        <div class="slds-scrollable" style="height: 100%;">
+            <section role="log" class="slds-chat">
+                <ul class="slds-chat-list ">
+                    <template for:each={entries} for:item="entry" for:index="idx">
+                        <c-chat-client-entry entry={entry} key={entry.idx}></c-chat-client-entry>
+                    </template>
+                </ul>
+            </section>
+        </div>
+        <div slot="footer">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="text-input-id-1">Message:</label>
+                <div class="slds-form-element__control">
+                    <input id="text-input-id-1" placeholder="Enter message to send" class="slds-input" type="text"
+                        value="" onchange={handleChange} />
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <li class={className}>
+        <div class="slds-chat-message">
+            <div class="slds-chat-message__body">
+                <div class={msgClassName}>
+                    <span>{entry.text}</span>
+                </div>
+                <div class="slds-chat-message__meta" aria-label="said Taylor Watson-Rice at 4:59 PM">
+                    {entry.name} • {formattedTime}</div>
+            </div>
+        </div>
+    </li>
+</template>
