@@ -27,7 +27,7 @@ io.on('connection', function (socket) {
     socket.on('chat message', function (msg) {
         console.log('message: ' + msg);
         var msgObj = JSON.parse(msg);
-        // first message sent by user is their name
+        
         userId = htmlEntities(msgObj.userid);
         var userName = htmlEntities(msgObj.name);
         var text = htmlEntities(msgObj.text);
